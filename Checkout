@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SwiftAir</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/main.css?v=31" />				
+		<link href="css/styles.css" type="text/css" rel="stylesheet" media="screen" />						
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen" />
+		<link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" media="screen" />		
+		<link rel="stylesheet" href="css/overrides.css" />
+	</head>
+
+<body>
+<!-- // Slider Menu -->
+<div id="menu">
+	<div class="menu-top">
+		<h4>Login</h4>
+		<a class="close pull-right showMenu" href="#">&times;</a>  
+	</div>
+	<h3 class="menu-top-pad">  
+    	<form class="form-inline">
+    		<input type="text" class="input-small" placeholder="Email">
+    		<input type="password" class="input-small" placeholder="Password">
+    		<button type="submit" class="btn btn-inverse">Sign in</button>
+    		<button href="javascript:void(0);" id="forgot-password" class="btn btn-inverse" type="button">Register</button>
+    	</form>
+	</h3>
+		<p class="menu-cnt-pad"><strong>WHY REGISTER?</strong></p>
+		<p class="menu-cnt-pad">We’ll NEVER send you an email. But you’ll be able to send yourself articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+		<p class="menu-cnt-pad">You’ll be able to buy <strong>EXCLUSIVE</strong> experiences and deals you can only find here.</p>
+		<p class="menu-cnt-pad">So you can watch our <strong>EXCLUSIVE</strong> travel show "<strong>It's Good To Have Friends</strong>" and hear what the locals say are the best things to do, see, and buy in their city.</p>
+		<p class="menu-cnt-pad">It will take less than 45 seconds.</p>
+		<p class="menu-cnt-pad">You’ll automatically be logged in when you return, on this flight or your next one (or your next one, or your next one…).</p>
+		<p class="menu-cnt-pad">
+		<div id="recover-password" style="display:none;">
+		<form class="form-horizontal">
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<input type="text" id="inputName" placeholder="Full Name">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmail">Email Address</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmail" placeholder="Email Address">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmailConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmailConfirm" placeholder="Confirm Email Address">
+    			</div>
+    			<p class="menu-cnt-sec">Please enter a valid email address.<br />A verification email will be sent to the email address specified above. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPassword">Password</label>
+    			<div class="controls">
+    				<input type="password" id="inputPassword" placeholder="Password">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPasswordConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputPasswordConfirm" placeholder="Confirm Password">
+    			</div>
+    			<p class="menu-cnt-sec">Your password should be least 5 characters long. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<span class="clearfix">Secret Question *</span>
+    				<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputAnswer">Answer</label>
+    			<div class="controls">
+    				<input type="text" id="inputAnswer" placeholder="Answer">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<div class="controls">
+    				<label class="checkbox">
+    					<input type="checkbox"> <p>I have read and agree to the Terms of Use.</p>
+    				</label>
+    			<button type="submit" class="btn btn-inverse">Sign up</button>
+    			</div>
+    		</div>
+    	</form>
+		</div>
+		</p>
+		<div class="accordion" id="accordion2">
+			<div class="accordion-group acc-gr">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><i class="icon-download-alt icon-white"></i> Saved Articles ( 2 )</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>At any moment, you're allowed to save articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">All about Chicago...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">Momo's Menu...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="icon-shopping-cart icon-white"></i> Shopping Cart ( 4 )</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>You have currently 4 items in your shopping cart.</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-tag icon-white"></i> Half-off Chef's Six...</td>
+								<td class="txtRgt" width="25%"><div class="strike">$100</div> $80</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%">Dinner for Four...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">&nbsp;</td>
+								<td width="5%">4</td>
+								<td width="60%">TOTAL ITEMS:</td>
+								<td class="txtRgt" width="25%">$220</td>
+								<td width="5%"><button class="btn btn-mini btn-success btn-width" type="button">Checkout</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><i class="icon-gift icon-white"></i> My Gifts ( 2 )</a>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Here are your Gift's</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td width="5%">$50</td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td width="5%">$50</td>
+							</tr>
+						</table>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="30%">&nbsp;</td>
+								<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Combine Gifts</button></td>
+								<td width="10%"><button href="javascript:void(0);" id="forgot-gift" class="btn btn-mini" type="button">Give Gifts</button></td>
+							</tr>
+						</table>
+						<div id="recover-gift" style="display:none;">
+							<p>To whom do you want this gift sent to?</p>
+							
+							<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputName" placeholder="Senders Full Name">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmail" placeholder="Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmailConfirm" placeholder="Confirm Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputPhone" placeholder="Senders Phone Number">
+    							</div>
+    						</div>
+							<button type="submit" class="btn">Save</button>&nbsp; OR &nbsp;<button type="submit" class="btn btn-success">Proceed to Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><i class="icon-home icon-white"></i> Questions for the Locals ( 2 )</a>
+				</div>
+				<div id="collapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>1.9.2013 – Wednesday 4:20 PM (CST)</p>
+						<p><strong>Wymeia Sanders</strong> - A 27 year old resident and full time foodie.<br /><i>"Wymeia, I loved the article written on you and I know your a breakfast foodie expert. Where is the best place to eat to take my client to for breakfast?"</i></p>
+						<div class="borderline"></div>
+						<p>1.9.2013 – Wednesday 4:26 PM (CST)</p>
+						<p><strong>Paul Cuban</strong> - Legend Chicago Historian that can guide you to the most historic must see places in the city.<br /><i>"Paul, I'd love to have an opportunity to meet you. I have clients that could help both of us."</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<!-- // Main Page -->
+<div data-role="page" class="pages" id="home">
+
+<div class="logo">
+	<a rel="external" href="index.html"><img src="images/main-logo.jpg" width="300" /></a>
+	<div class="drop-select"> 
+		<div class="dropdown">
+     		<div class="dropdown-toggle" data-toggle="dropdown">
+    			<span><a rel="external" data-toggle="dropdown-menu" href="#">Chicago</a></span>
+				<span class="caret"></span>
+			</div>
+    		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    			<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    		</ul>
+    	</div><!-- /.dropdown -->
+	</div><!-- /.drop-select -->
+</div><!-- /.logo -->
+
+<!-- // Navigation -->
+<div id="navi">
+<div class="navbar navbar-inverse">
+	<div class="navbar-inner">
+        <div class="container">
+        	
+        	<a href="#" style="float:left !important;" class="showMenu btn btn-navbar">
+        	<i class="icon-user icon-white"></i> Trey Bayne
+        	</a>
+        	
+        	<a href="#" style="float:left !important;" class="btn btn-navbar"><i class="icon-home icon-white"></i> Home</a>
+        	
+        	<a rel="external" data-ajax="false" href="show.html" style="float:left !important;" class="btn btn-navbar"><i class="icon-play icon-white"></i> Play Show</a>
+        	
+        	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-align-justify icon-white"></i> Navigation
+        	</a>
+          
+          	<div class="nav-collapse collapse">
+            	<ul class="nav">
+            		<h3>&mdash; Table Of Contents &mdash;</h3>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-star icon-white"></i> <b>PURCHASE AND REDEMPTION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="show.html"><i class="icon-play icon-white"></i> <b>ITS GOOD TO HAVE FRIENDS</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-road icon-white"></i> <b>TRANSPORTATION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-th-list icon-white"></i> <b>EVENTS</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-share icon-white"></i> <b>LEARN MORE ABOUT CHICAGO</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-user icon-white"></i> <b>MEET THE SWIFTAIR TEAM</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+            			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="date-night.html"><i class="icon-heart icon-white"></i> <b>DATE NIGHT</b></a></div>
+    					</div>
+            		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-ok icon-white"></i> <b>BRENDAN'S ITINERARY</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="trending-topic.html"><i class="icon-ok-sign icon-white"></i> <b>TRENDING TOPICS</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="category.html"><i class="icon-plus-sign icon-white"></i> <b>THINGS TO DO</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-map-marker icon-white"></i> <b>PLACES TO EAT</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-plane icon-white"></i> <b>FOR THE ADVENTURER</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-eye-open icon-white"></i> <b>NIGHTLIFE</b> (15)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-picture icon-white"></i> <b>FAMILY FUN</b> (10)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-flag icon-white"></i> <b>LANDMARKS</b> (17)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="locals.html"><i class="icon-upload icon-white"></i> <b>LOCAL INSIDERS</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="experiences.html"><i class="icon-camera icon-white"></i> <b>ALL EXPERIENCES</b> (40)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="deals.html"><i class="icon-tag icon-white"></i> <b>ALL DISCOUNTS</b> (25)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="#"><i class="icon-camera icon-white"></i> <b>VIEW ALL BY MAP</b></a></div>
+    					</div>
+              		</li>
+            	</ul>
+          	</div><!--/.nav-collapse -->
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<!-- // Header Slider -->
+<div id="myCarousel" class="carousel slide">
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+    	<div class="active item">
+    		<img id="mainimg" src="images/checkout-header.jpg" />
+    		
+    		<div class="title-hldr">
+      			<div class="carousel-caption-new">
+        			<p><span>REDEEMING</span></p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p><span>IS EASY</span></p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p>Once you land, you will receive a text and email with a code for each purchase. <b>Present Code</b>, and presto! </p>
+      			</div>
+      		</div><!--/.title-hldr -->
+      		
+    	</div><!--/.item -->
+    	
+    </div><!--/.carousel-inner -->
+    
+    <button id="buydeal" class="btn btn-primary btn-large btn-pos-ck" type="button">TOTAL: <span class="strike">$240</span> <b>$220</b></button>
+    
+</div><!--/#myCarousel -->    
+<div id="main-cnt">
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p>&nbsp;</p>
+    		<p><b>Your moments away from creating some awesome adventures in the Chicago area.</b> Remember our purchase are secure, and easy for all our customers. When you make these purchases, all your transaction and redeeming codes will be emailed and texted to you once you land. Simply show your code, and you are ready to go!</p>	
+    		<p>Any article that has been saved, or comments that have been made will be emailed. Have a fantastic trip!!!</p>
+    		<h3>YOUR PURCHASES</h3>
+    		<table class="table table-striped">
+    			<tr class="">
+    				<td width="10%">&nbsp;</td>
+    				<td width="10%"><b>Quantity</b></td>
+    				<td width="55%"><b>Description</b></td>
+    				<td style="text-align:right;" width="15%"><b>Price</b></td>
+    				<td width="10%">&nbsp;</td>
+    			</tr>
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td style="text-align:center;" width="10%"><input class="quanity" type="text" placeholder="1" /></td>
+    				<td width="55%"><i class="icon-tag"></i> Half-off Chief's Six Course Tasting Menu</td>
+    				<td style="text-align:right;" width="15%"><span class="strike-dark">$100</span> $80</td>
+    				<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Delete</button></td>
+    			</tr>
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td style="text-align:center;" width="10%"><input class="quanity" type="text" placeholder="1" /></td>
+    				<td width="55%"><i class="icon-gift"></i> Chicago Cubs Tickets Saturday Night <a class="pull-right" href="javascript:void(0);" id="gift-hide">change sender <span class="caret"></span></a></td>
+    				<td style="text-align:right;" width="15%">$50</td>
+    				<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Delete</button></td>
+    			</tr>
+    			<tr id="gift-hidden" style="display:none">
+    				<td width="10%"></td>
+    				<td style="text-align:center;" width="10%"></td>
+    				<td width="55%"><input type="text" placeholder="John Stafira" /> <input type="email" placeholder="john@swiftairmedia.com" /> <input type="text" placeholder="972.123.1234" /></td>
+    				<td style="text-align:right;" width="15%"></td>
+    				<td width="10%"><button class="btn btn-mini btn-success" type="button">Update</button></td>
+    			</tr>
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td style="text-align:center;" width="10%"><input class="quanity" type="text" placeholder="1" /></td>
+    				<td width="55%"><i class="icon-gift"></i> Skydiving for a Day <a class="pull-right" href="javascript:void(0);" id="gift-hide1">change sender <span class="caret"></span></a></td>
+    				<td style="text-align:right;" width="15%">$50</td>
+    				<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Delete</button></td>
+    			</tr>
+    			<tr id="gift-hidden1" style="display:none">
+    				<td width="10%"></td>
+    				<td style="text-align:center;" width="10%"></td>
+    				<td width="55%"><input type="text" placeholder="John Stafira" /> <input type="email" placeholder="john@swiftairmedia.com" /> <input type="text" placeholder="972.123.1234" /></td>
+    				<td style="text-align:right;" width="15%"></td>
+    				<td width="10%"><button class="btn btn-mini btn-success" type="button">Update</button></td>
+    			</tr>
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td style="text-align:center;" width="10%"><input class="quanity" type="text" placeholder="1" /></td>
+    				<td width="55%">Dinner for Four</td>
+    				<td style="text-align:right;" width="15%">$50</td>
+    				<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Delete</button></td>
+    			</tr>
+    			<tr>
+    				<td width="10%"></td>
+    				<td style="text-align:center;" width="10%"><b>Total</b></td>
+    				<td width="55%"></td>
+    				<td style="text-align:right;" width="15%"><span class="strike-dark">$240</span> $220</td>
+    				<td width="10%"></td>
+    			</tr>
+    		</table>
+    		<h3>YOUR FILES</h3>
+    		<table class="table table-striped">
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td width="65%">All About Chicago <a class="pull-right" href="javascript:void(0);" id="file-hide">change sender <span class="caret"></span></a></td>
+    				<td width="6%"></td>
+    				<td width="19%"><button class="btn btn-mini btn-primary" type="button">Send File</button> &nbsp; <button class="btn btn-mini btn-inverse" type="button">Delete</button> </td>
+    			</tr>
+    			<tr id="file-hidden" style="display:none">
+    				<td width="10%"></td>
+    				<td width="65%"><input type="text" placeholder="Trey Bayne" /> <input type="email" placeholder="trey@swiftairmedia.com" /> <input type="text" placeholder="972.123.1234" /></td>
+    				<td width="6%"></td>
+    				<td width="19%"><button class="btn btn-mini btn-success pull-right-update" type="button">Update</button></td>
+    			</tr>
+    			<tr>
+    				<td width="10%"><label><input type="checkbox" style="display:none" value="option1"></label></td>
+    				<td width="65%">Momo's Menu <a class="pull-right" href="javascript:void(0);" id="file-hide1">change sender <span class="caret"></span></a></td>
+    				<td width="6%"></td>
+    				<td width="19%"><button class="btn btn-mini btn-primary" type="button">Send File</button> &nbsp; <button class="btn btn-mini btn-inverse" type="button">Delete</button> </td>
+    			</tr>
+    			<tr id="file-hidden1" style="display:none">
+    				<td width="10%"></td>
+    				<td width="65%"><input type="text" placeholder="Trey Bayne" /> <input type="email" placeholder="trey@swiftairmedia.com" /> <input type="text" placeholder="972.123.1234" /></td>
+    				<td width="6%"></td>
+    				<td width="19%"><button class="btn btn-mini btn-success pull-right-update" type="button">Update</button></td>
+    			</tr>
+    		</table>
+    		<div class="row-fluid">
+    			<div class="span12">
+    				<h3>ALREADY HAVE AN ACCOUNT?</h3>
+    				<p><i><a href="#">Login</a> using your SwiftAir account.</i></p>
+    			</div>
+    		</div>
+    		<h3>DON'T HAVE AN ACCOUNT?</h3>
+    		<div class="row-fluid">
+    			<div class="span6">
+    				<p><label>Name<label> <input type="text" /></p>
+    				<p><label>Email<label> <input type="email" /></p>
+    				<p><label>Password<label> <input type="text" /></p>
+    				<p><label>Confirm Password<label> <input type="text" /></p>
+    			</div>
+    			<div class="span6">
+    				<p><label>Secret Question<label><input type="text" /></p>
+    				<p><label>Secret Answer<label><input type="text" /></p>
+    			</div>
+    		</div>
+    		<h3>BILLING INFORMATION</h3>
+    		<div class="row-fluid">
+    			<div class="span6">
+    				<p><label>Address <span class="red">*</span><label> <input type="text" /><br /><input type="text" /></p>
+    				<p><label>City <span class="red">*</span><label> <input type="email" /></p>
+    				<p><label>State/Province <span class="red">*</span><label> <input type="text" /></p>
+    				<p><label>Postal Code <span class="red">*</span><label> <input type="text" /></p>
+    				<p><label>Country <span class="red">*</span><label> <input type="text" /></p>
+    				<p><label>Mobile Number <span class="red">*</span><label> <input type="text" /><Br /><small>We will send the redemption codes through SMS.</small></p>
+    			</div>
+    			<div class="span6">
+    				<p><label>Card Holder Name<label><input type="text" /></p>
+    				<p><label>Card Type<label><input type="text" /></p>
+    				<p><label>Card Number<label><input type="text" /></p>
+    				<p><label>Card Expiration<label><input type="text" /></p>
+    				<p><label>Card Cvv<label><input type="text" /></p>
+    				<p><img class="pull-right" src="images/credit-cards.jpg" /></p>
+    				<p></p>
+    			</div>
+    		</div>	
+    		<div class="row-fluid">
+    			<div class="span12">
+    				<p><label><input type="checkbox" style="display:none" value="option1"></label> I have read, understand and agree with the Terms of Use of this website <span class="red">*</span> <button class="btn btn-success pull-right-checkbox" type="button"><i class="icon-shopping-cart icon-white"></i> CHECKOUT</button></p>
+    			</div>
+    		</div>
+    	</div>
+     
+    </div>
+</div><!--/.main-cnt -->
+
+<!-- // Experiences -->
+<div>     
+	<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+          
+          	<div>
+            	<ul class="nav-btm nav">
+              		<li><a href="#">Other Cities</a></li>
+              		<li><a href="#">About</a></li>
+              		<li><a href="#">Terms & Conditions</a></li>
+              		<li><a href="#">Privacy Policy</a></li>
+              		<li><a href="#">FAQs</a></li>
+              		<img class="btm-logo" src="images/swiftair-btm-logo.jpg" width="180" />
+            	</ul>
+          	</div><!--/.nav-collapse -->
+          	
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div> <!-- /.sec-mid -->
+</div>
+
+<!-- // Footer Menu -->
+
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/insider.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$('#gift-hide').click(function(){
+		$('#gift-hidden').toggle(); 
+	});
+	
+	$('#gift-hide1').click(function(){
+		$('#gift-hidden1').toggle(); 
+	});
+	
+	$('#file-hide').click(function(){
+		$('#file-hidden').toggle(); 
+	});
+	
+	$('#file-hide1').click(function(){
+		$('#file-hidden1').toggle(); 
+	});
+});
+</script>
+</body>
+</html>
