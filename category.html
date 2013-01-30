@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SwiftAir</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/main.css?v=31" />				
+		<link href="css/styles.css" type="text/css" rel="stylesheet" media="screen" />						
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen" />
+		<link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" media="screen" />		
+		<link rel="stylesheet" href="css/overrides.css" />		
+	</head>
+
+<body>
+<!-- // Slider Menu -->
+<div id="menu">
+	<div class="menu-top">
+		<h4>Login</h4>
+		<a class="close pull-right showMenu" href="#">&times;</a>  
+	</div>
+	<h3 class="menu-top-pad">  
+    	<form class="form-inline">
+    		<input type="text" class="input-small" placeholder="Email">
+    		<input type="password" class="input-small" placeholder="Password">
+    		<button type="submit" class="btn btn-inverse">Sign in</button>
+    		<button href="javascript:void(0);" id="forgot-password" class="btn btn-inverse" type="button">Register</button>
+    	</form>
+	</h3>
+		<p class="menu-cnt-pad"><strong>WHY REGISTER?</strong></p>
+		<p class="menu-cnt-pad">We’ll NEVER send you an email. But you’ll be able to send yourself articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+		<p class="menu-cnt-pad">You’ll be able to buy <strong>EXCLUSIVE</strong> experiences and deals you can only find here.</p>
+		<p class="menu-cnt-pad">So you can watch our <strong>EXCLUSIVE</strong> travel show "<strong>It's Good To Have Friends</strong>" and hear what the locals say are the best things to do, see, and buy in their city.</p>
+		<p class="menu-cnt-pad">It will take less than 45 seconds.</p>
+		<p class="menu-cnt-pad">You’ll automatically be logged in when you return, on this flight or your next one (or your next one, or your next one…).</p>
+		<p class="menu-cnt-pad">
+		<div id="recover-password" style="display:none;">
+		<form class="form-horizontal">
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<input type="text" id="inputName" placeholder="Full Name">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmail">Email Address</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmail" placeholder="Email Address">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmailConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmailConfirm" placeholder="Confirm Email Address">
+    			</div>
+    			<p class="menu-cnt-sec">Please enter a valid email address.<br />A verification email will be sent to the email address specified above. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPassword">Password</label>
+    			<div class="controls">
+    				<input type="password" id="inputPassword" placeholder="Password">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPasswordConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputPasswordConfirm" placeholder="Confirm Password">
+    			</div>
+    			<p class="menu-cnt-sec">Your password should be least 5 characters long. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<span class="clearfix">Secret Question *</span>
+    				<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputAnswer">Answer</label>
+    			<div class="controls">
+    				<input type="text" id="inputAnswer" placeholder="Answer">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<div class="controls">
+    				<label class="checkbox">
+    					<input type="checkbox"> <p>I have read and agree to the Terms of Use.</p>
+    				</label>
+    			<button type="submit" class="btn btn-inverse">Sign up</button>
+    			</div>
+    		</div>
+    	</form>
+		</div>
+		</p>
+		<div class="accordion" id="accordion2">
+			<div class="accordion-group acc-gr">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><i class="icon-download-alt icon-white"></i> Saved Articles ( 2 )</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>At any moment, you're allowed to save articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">All about Chicago...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">Momo's Menu...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="icon-shopping-cart icon-white"></i> Shopping Cart ( 4 )</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>You have currently 4 items in your shopping cart.</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-tag icon-white"></i> Half-off Chef's Six...</td>
+								<td class="txtRgt" width="25%"><div class="strike">$100</div> $80</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%">Dinner for Four...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">&nbsp;</td>
+								<td width="5%">4</td>
+								<td width="60%">TOTAL ITEMS:</td>
+								<td class="txtRgt" width="25%">$220</td>
+								<td width="5%"><button class="btn btn-mini btn-success btn-width" type="button">Checkout</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><i class="icon-gift icon-white"></i> My Gifts ( 2 )</a>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Here are your Gift's</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td width="5%">$50</td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td width="5%">$50</td>
+							</tr>
+						</table>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="30%">&nbsp;</td>
+								<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Combine Gifts</button></td>
+								<td width="10%"><button href="javascript:void(0);" id="forgot-gift" class="btn btn-mini" type="button">Give Gifts</button></td>
+							</tr>
+						</table>
+						<div id="recover-gift" style="display:none;">
+							<p>To whom do you want this gift sent to?</p>
+							
+							<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputName" placeholder="Senders Full Name">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmail" placeholder="Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmailConfirm" placeholder="Confirm Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputPhone" placeholder="Senders Phone Number">
+    							</div>
+    						</div>
+							<button type="submit" class="btn">Save</button>&nbsp; OR &nbsp;<button type="submit" class="btn btn-success">Proceed to Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><i class="icon-home icon-white"></i> Questions for the Locals ( 2 )</a>
+				</div>
+				<div id="collapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>1.9.2013 – Wednesday 4:20 PM (CST)</p>
+						<p><strong>Wymeia Sanders</strong> - A 27 year old resident and full time foodie.<br /><i>"Wymeia, I loved the article written on you and I know your a breakfast foodie expert. Where is the best place to eat to take my client to for breakfast?"</i></p>
+						<div class="borderline"></div>
+						<p>1.9.2013 – Wednesday 4:26 PM (CST)</p>
+						<p><strong>Paul Cuban</strong> - Legend Chicago Historian that can guide you to the most historic must see places in the city.<br /><i>"Paul, I'd love to have an opportunity to meet you. I have clients that could help both of us."</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<!-- // Main Page -->
+<div data-role="page" class="pages" id="home">
+
+<div class="logo">
+	<a rel="external" href="index.html"><img src="images/main-logo.jpg" width="300" /></a>
+	<div class="drop-select"> 
+		<div class="dropdown">
+     		<div class="dropdown-toggle" data-toggle="dropdown">
+    			<span><a rel="external" data-toggle="dropdown-menu" href="#">Chicago</a></span>
+				<span class="caret"></span>
+			</div>
+    		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    			<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    		</ul>
+    	</div><!-- /.dropdown -->
+	</div><!-- /.drop-select -->
+</div><!-- /.logo -->
+
+<!-- // Navigation -->
+<div id="navi">
+<div class="navbar navbar-inverse">
+	<div class="navbar-inner">
+        <div class="container">
+        	
+        	<a href="#" style="float:left !important;" class="showMenu btn btn-navbar">
+        	<i class="icon-user icon-white"></i> Trey Bayne
+        	</a>
+        	
+        	<a href="#" style="float:left !important;" class="btn btn-navbar"><i class="icon-home icon-white"></i> Home</a>
+        	
+        	<a rel="external" data-ajax="false" href="show.html" style="float:left !important;" class="btn btn-navbar"><i class="icon-play icon-white"></i> Play Show</a>
+        	
+        	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-align-justify icon-white"></i> Navigation
+        	</a>
+          
+          	<div class="nav-collapse collapse">
+            	<ul class="nav">
+            		<h3>&mdash; Table Of Contents &mdash;</h3>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-star icon-white"></i> <b>PURCHASE AND REDEMPTION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="show.html"><i class="icon-play icon-white"></i> <b>ITS GOOD TO HAVE FRIENDS</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-road icon-white"></i> <b>TRANSPORTATION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-th-list icon-white"></i> <b>EVENTS</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-share icon-white"></i> <b>LEARN MORE ABOUT CHICAGO</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-user icon-white"></i> <b>MEET THE SWIFTAIR TEAM</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+            			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="date-night.html"><i class="icon-heart icon-white"></i> <b>DATE NIGHT</b></a></div>
+    					</div>
+            		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-ok icon-white"></i> <b>BRENDAN'S ITINERARY</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="trending-topic.html"><i class="icon-ok-sign icon-white"></i> <b>TRENDING TOPICS</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="category.html"><i class="icon-plus-sign icon-white"></i> <b>THINGS TO DO</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-map-marker icon-white"></i> <b>PLACES TO EAT</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-plane icon-white"></i> <b>FOR THE ADVENTURER</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-eye-open icon-white"></i> <b>NIGHTLIFE</b> (15)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-picture icon-white"></i> <b>FAMILY FUN</b> (10)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-flag icon-white"></i> <b>LANDMARKS</b> (17)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="locals.html"><i class="icon-upload icon-white"></i> <b>LOCAL INSIDERS</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="experiences.html"><i class="icon-camera icon-white"></i> <b>ALL EXPERIENCES</b> (40)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="deals.html"><i class="icon-tag icon-white"></i> <b>ALL DISCOUNTS</b> (25)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="#"><i class="icon-camera icon-white"></i> <b>VIEW ALL BY MAP</b></a></div>
+    					</div>
+              		</li>
+            	</ul>
+          	</div><!--/.nav-collapse -->
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<!-- // Sub Navigation -->
+<div id="sub-navi" style="display:none">
+<div class="navbar">
+	<div class="navbar-sub">
+        <div class="container">
+        
+            <div class="row-fluid">
+    			<div id="save_file_gray" class="span9">
+    				<p>You have <span id="bar_file_count" class="badge badge-info">1</span> Saved File &nbsp; <button class="btn-marg btn btn-mini btn-primary" type="button">SEND FILES</button></p>
+    				
+    			</div>
+    			<div class="span3">
+
+    			</div>
+    		</div>
+
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<!-- // Header Slider -->
+<div id="myCarousel" class="carousel slide">
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+    	<div class="active item greatest">
+    		<img src="images/slider1.jpg" />    		
+    		<div class="title-hldr">
+    			<div class="carousel-caption-new">
+        			<p>G R E A T E S T</p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p><span>Things to do</span></p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p>Discover some of the coolest things to do in Chicago.</p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p>Check below and get started!</p>
+      			</div>
+      		</div><!--/.title-hldr -->
+    	</div><!--/.item -->
+    	
+    	<div class="item coolest">
+    		<img src="images/eat-header.jpg" />
+    		<div class="title-hldr">
+    			<div class="carousel-caption-new">
+        			<p>C O O L E S T</p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p><span>Places</span></p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p><span>to eat</span></p>
+      			</div>
+      			<div class="carousel-caption-new">
+        			<p>Hungry? We've got amazing discounts and incredible restaurants.</p>
+      			</div>
+      		</div><!--/.title-hldr -->
+    	</div><!--/.item -->
+    	
+    </div><!--/.carousel-inner -->
+    
+    <!-- Carousel nav -->
+    <a rel="external" class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a rel="external" class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!--/#myCarousel -->    
+
+<div class="exp-header-sub">
+    <div class="row-fluid">
+    <div class="span9">
+    	<span id="exp-header-sub-text">Chicago's <b>Greatest Things</b> To Do</span>
+    </div>
+    <div class="span3">
+    	<a id="savearticle" class="btn-save" href="#"> <i class="icon-download-alt icon-white"></i> Save This Article</a>
+    </div>
+    </div>
+</div>
+
+<div id="main-cnt">
+    <div class="row-fluid">
+    	<div class="span12">
+    		<p><b>Chicago is a grand, vibrant city and sprawling metropolitan area.</b> It is the home of the blues and the truth of jazz, the heart of comedy and the first builder of the skyscraper. It is one of the world's great cities, and yet the metropolitan luxuries of theater, shopping, and fine dining have barely put a dent in real Midwestern friendliness. It's a city with a swagger, but without the surliness or fakery found in cities of like size. </p>
+    		<p>Chicago’s picturesque skyline calls across the waters of huge Lake Michigan, a majestic curtain that soon reveals world-class museums of art and science, miles of sandy beaches, huge parks and public art, and perhaps the finest downtown collection of architecture in the world.</p>
+    		<p>While the city has many attractions — both world-class and regionally organic — in its huge central/downtown area, lots of Chicagoans live and play outside of the central business district. To understand more of the city, travelers can venture away from the Loop and Michigan Avenue into its vibrant neighborhoods to soak up the local nightlife, sample the wide range of hearty dining options, and enjoy family-friendly stops rich with local meaning. Thanks to the city's massive public transit system, all parts of Chicago are accessible. </p>
+    		<p>With a wealth of iconic sights and neighborhoods to explore, there's enough to fill a visit of weeks or even months without ever seeing the end. Prepare to cover a lot of ground: the meaning of Chicago is only found in movement, through its subways and archaic elevated tracks, in the pride of tired feet and eyes raised once more to the sky.</p>
+    		<p><button class="btn btn-primary" type="button">Save Article</button></p>
+    	</div>
+    </div>
+</div>
+
+<div class="exp">
+	<a href="#" id="lnkExperience">Featured Experiences</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="sec-link" href="#" id="lnkFeaturedDeal">Featured Deals</a> <span><a id="lnkAll" href="#">See All</a></span>
+</div>
+
+<!-- // Experiences -->
+<div id="sec-mid" class="container-fluid">
+	
+	<div id="myCarousel2" class="carousel slide">
+
+    	<!-- Carousel items -->
+    	<div class="carousel-inner">
+
+
+    	</div><!--/.carousel-inner -->
+    					
+    	<!-- Carousel nav -->
+    	<div id="carousel-nav">
+        	<a href="#myCarousel2" data-to="1" class="active">1</a>
+			<a href="#myCarousel2" data-to="2">2</a>
+			<a href="#myCarousel2" data-to="3">3</a>	
+        </div>
+        <!--/.Carousel nav -->
+    </div><!--/.myCarousel2 -->
+
+	<h2 id="titleExperiences">Featured Experiences</h2>
+
+    <div style="display:none" id="containerExperiences">
+    		<div class="active item experiences">
+    			<div class="row-fluid">
+
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img.jpg" />
+        					<div class="caption">
+        						<h3>Chicago's Best Personal Tour Guide</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$200</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img2.jpg" />
+        					<div class="caption">
+        						<h3>Stand-Up Paddle Boarding On The Mississippi River</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$89</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img3.jpg" />
+        					<div class="caption">
+        						<h3>Chicago Cubs Game Saturday Night</h3>
+        						<p>Cubs. The team that never wins yet always wins. They have the most loyal fans of all baseball. In 1998, Sammy Sosa got off to a slow start, hitting 13 home runs in the first two months of the season with the Cubs. But he found his groove in June, belting 20 that month... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br /><b>$400</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+
+    			</div>
+    		</div>
+    							
+    		<div class="item experiences">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/feat-image-gio.jpg" />
+        					<div class="caption">
+        						<h3>Giorgianno's Pizza</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax="false" href="deal.html">View It Now! <br /><b>$100</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img2.jpg" />
+        					<div class="caption">
+        						<h3>Stand-Up Paddle Boarding On The Mississippi River</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$89</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img.jpg" />
+        					<div class="caption">
+        						<h3>Chicago Cubs Game Saturday Night</h3>
+        						<p>Cubs. The team that never wins yet always wins. They have the most loyal fans of all baseball. In 1998, Sammy Sosa got off to a slow start, hitting 13 home runs in the first two months of the season with the Cubs. But he found his groove in June, belting 20 that month... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br /><b>$400</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+											
+      			</div><!-- /.row -->
+    		</div><!--/.item -->
+    						
+    		<div class="item experiences">
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img3.jpg" />
+        					<div class="caption">
+        						<h3>Chicago's Best Personal Tour Guide</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$100</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img2.jpg" />
+        					<div class="caption">
+        						<h3>Stand-Up Paddle Boarding On The Mississippi River</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br />$89</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img.jpg" />
+        					<div class="caption">
+        						<h3>Chicago Cubs Game Saturday Night</h3>
+        						<p>Cubs. The team that never wins yet always wins. They have the most loyal fans of all baseball. In 1998, Sammy Sosa got off to a slow start, hitting 13 home runs in the first two months of the season with the Cubs. But he found his groove in June, belting 20 that month... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$400</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+      			</div><!-- /.row -->
+    		</div><!--/.item -->    	
+    </div>
+
+    <h2 id="titleDeals">Featured Deals</h2>
+
+    <div style="display:none" id="containerDeals">
+
+    		<div class="active item deals">
+    			<div class="row-fluid">
+
+    				<div class="span4">
+        				<div class="thumbnail">
+        					<img src="http://dev.swiftairmedia.com/content/merchants/71/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Morso</h3>
+        						<p>Inspired Cuisine and Magical Drinks. Entrench yourself in a six-course tasting menu prepared by the kitchen at MorSo, in the heart of the Lincoln Park neighborhood of Chicago. MorSo’s focus is wild game and seafood preparation utilizing fresh... </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" data-ajax=false href="deal2.html">View Deal! <br><span class="strike">$200</span> <b>$100</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/12/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Bistro One West</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$150</span> <b>$99</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/85/image-1-tm.jpg" />
+        					<div class="caption">
+        						<h3>Quay</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$140</span> <b>$100</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+
+    			</div>
+    		</div>
+
+    		<div class="item deals">
+    			<div class="row-fluid">
+
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/109/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Volo Auto Museum</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$32</span> <b>$22</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/49/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Handglide Chicago</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$150</span> <b>$110</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/3/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>O'Malley's</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$130</span> <b>$100</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+
+    			</div>
+    		</div>
+
+    		<div class="item deals">
+    			<div class="row-fluid">
+
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/14/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Blueman Group</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$89</span> <b>$69</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/84/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Proof</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$80</span> <b>$40</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://dev.swiftairmedia.com/content/merchants/34/merchant1.jpg" />
+        					<div class="caption">
+        						<h3>Down the Line Rooftop</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary ui-link" href="#">View Deal! <br><span class="strike">$156</span> <b>$109</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+
+    			</div>
+    		</div>
+
+    </div>    
+	
+</div> <!-- /.sec-mid -->
+
+<!-- // Footer Menu -->
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+          
+          	<div>
+            	<ul class="nav-btm nav">
+              		<li><a href="#">Other Cities</a></li>
+              		<li><a href="#">About</a></li>
+              		<li><a href="#">Terms & Conditions</a></li>
+              		<li><a href="#">Privacy Policy</a></li>
+              		<li><a href="#">FAQs</a></li>
+              		<img class="btm-logo" src="images/swiftair-btm-logo.jpg" width="180" />
+            	</ul>
+          	</div><!--/.nav-collapse -->
+          	
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/category.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+<script>
+$(document).ready(function() {
+   $("#myCarousel").swiperight(function() {
+      $("#myCarousel").carousel('prev');
+    });
+   $("#myCarousel").swipeleft(function() {
+      $("#myCarousel").carousel('next');
+   });
+});
+</script>
+</body>
+</html>
