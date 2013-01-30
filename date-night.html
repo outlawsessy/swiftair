@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>SwiftAir</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/main.css?v=31" />				
+		<link href="css/styles.css" type="text/css" rel="stylesheet" media="screen" />						
+		<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="screen" />
+		<link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet" media="screen" />		
+		<link rel="stylesheet" href="css/overrides.css" />		
+	</head>
+
+<body>
+<!-- // Slider Menu -->
+<div id="menu">
+	<div class="menu-top">
+		<h4>Login</h4>
+		<a class="close pull-right showMenu" href="#">&times;</a>  
+	</div>
+	<h3 class="menu-top-pad">  
+    	<form class="form-inline">
+    		<input type="text" class="input-small" placeholder="Email">
+    		<input type="password" class="input-small" placeholder="Password">
+    		<button type="submit" class="btn btn-inverse">Sign in</button>
+    		<button href="javascript:void(0);" id="forgot-password" class="btn btn-inverse" type="button">Register</button>
+    	</form>
+	</h3>
+		<p class="menu-cnt-pad"><strong>WHY REGISTER?</strong></p>
+		<p class="menu-cnt-pad">We’ll NEVER send you an email. But you’ll be able to send yourself articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+		<p class="menu-cnt-pad">You’ll be able to buy <strong>EXCLUSIVE</strong> experiences and deals you can only find here.</p>
+		<p class="menu-cnt-pad">So you can watch our <strong>EXCLUSIVE</strong> travel show "<strong>It's Good To Have Friends</strong>" and hear what the locals say are the best things to do, see, and buy in their city.</p>
+		<p class="menu-cnt-pad">It will take less than 45 seconds.</p>
+		<p class="menu-cnt-pad">You’ll automatically be logged in when you return, on this flight or your next one (or your next one, or your next one…).</p>
+		<p class="menu-cnt-pad">
+		<div id="recover-password" style="display:none;">
+		<form class="form-horizontal">
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<input type="text" id="inputName" placeholder="Full Name">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmail">Email Address</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmail" placeholder="Email Address">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputEmailConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputEmailConfirm" placeholder="Confirm Email Address">
+    			</div>
+    			<p class="menu-cnt-sec">Please enter a valid email address.<br />A verification email will be sent to the email address specified above. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPassword">Password</label>
+    			<div class="controls">
+    				<input type="password" id="inputPassword" placeholder="Password">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputPasswordConfirm">Confirm</label>
+    			<div class="controls">
+    				<input type="text" id="inputPasswordConfirm" placeholder="Confirm Password">
+    			</div>
+    			<p class="menu-cnt-sec">Your password should be least 5 characters long. </p>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputName">Full Name</label>
+    			<div class="controls">
+    				<span class="clearfix">Secret Question *</span>
+    				<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<label class="control-label" for="inputAnswer">Answer</label>
+    			<div class="controls">
+    				<input type="text" id="inputAnswer" placeholder="Answer">
+    			</div>
+    		</div>
+    		<div class="control-group">
+    			<div class="controls">
+    				<label class="checkbox">
+    					<input type="checkbox"> <p>I have read and agree to the Terms of Use.</p>
+    				</label>
+    			<button type="submit" class="btn btn-inverse">Sign up</button>
+    			</div>
+    		</div>
+    	</form>
+		</div>
+		</p>
+		<div class="accordion" id="accordion2">
+			<div class="accordion-group acc-gr">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><i class="icon-download-alt icon-white"></i> Saved Articles ( 2 )</a>
+				</div>
+				<div id="collapseOne" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>At any moment, you're allowed to save articles, deals, experiences, menus, or maps! Simply hit save and have them sent to your email. </p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">All about Chicago...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox"></td>
+								<td width="60%">Momo's Menu...</td>
+								<td width="5%">&nbsp;</td>
+								<td width="35%"><button class="btn btn-mini" type="button">Send</button> &nbsp; <button class="btn btn-mini" type="button">Delete</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><i class="icon-shopping-cart icon-white"></i> Shopping Cart ( 4 )</a>
+				</div>
+				<div id="collapseTwo" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>You have currently 4 items in your shopping cart.</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-tag icon-white"></i> Half-off Chef's Six...</td>
+								<td class="txtRgt" width="25%"><div class="strike">$100</div> $80</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+								</td>
+								<td width="5%">1</td>
+								<td width="60%">Dinner for Four...</td>
+								<td class="txtRgt" width="25%">$50</td>
+								<td width="5%"><button class="btn btn-mini btn-width" type="button">Delete</button></td>
+							</tr>
+							<tr>
+								<td width="5%">&nbsp;</td>
+								<td width="5%">4</td>
+								<td width="60%">TOTAL ITEMS:</td>
+								<td class="txtRgt" width="25%">$220</td>
+								<td width="5%"><button class="btn btn-mini btn-success btn-width" type="button">Checkout</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><i class="icon-gift icon-white"></i> My Gifts ( 2 )</a>
+				</div>
+				<div id="collapseThree" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>Here are your Gift's</p>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Chicago Cubs Tickets...</td>
+								<td width="5%">$50</td>
+							</tr>
+							<tr>
+								<td width="5%"><input type="checkbox" id="inlineCheckbox1" value="option1"></td>
+								<td width="5%">1</td>
+								<td width="60%"><i class="icon-gift icon-white"></i> Skydiving for a day...</td>
+								<td width="5%">$50</td>
+							</tr>
+						</table>
+						<table class="table table-condensed" width="100%">
+							<tr>
+								<td width="30%">&nbsp;</td>
+								<td width="10%"><button class="btn btn-mini btn-inverse" type="button">Combine Gifts</button></td>
+								<td width="10%"><button href="javascript:void(0);" id="forgot-gift" class="btn btn-mini" type="button">Give Gifts</button></td>
+							</tr>
+						</table>
+						<div id="recover-gift" style="display:none;">
+							<p>To whom do you want this gift sent to?</p>
+							
+							<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputName" placeholder="Senders Full Name">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmail" placeholder="Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputEmailConfirm" placeholder="Confirm Senders Email Address">
+    							</div>
+    						</div>
+    						<div class="control-group">
+    							<div class="controls">
+    								<input type="text" id="inputPhone" placeholder="Senders Phone Number">
+    							</div>
+    						</div>
+							<button type="submit" class="btn">Save</button>&nbsp; OR &nbsp;<button type="submit" class="btn btn-success">Proceed to Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a rel="external" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><i class="icon-home icon-white"></i> Questions for the Locals ( 2 )</a>
+				</div>
+				<div id="collapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<p>1.9.2013 – Wednesday 4:20 PM (CST)</p>
+						<p><strong>Wymeia Sanders</strong> - A 27 year old resident and full time foodie.<br /><i>"Wymeia, I loved the article written on you and I know your a breakfast foodie expert. Where is the best place to eat to take my client to for breakfast?"</i></p>
+						<div class="borderline"></div>
+						<p>1.9.2013 – Wednesday 4:26 PM (CST)</p>
+						<p><strong>Paul Cuban</strong> - Legend Chicago Historian that can guide you to the most historic must see places in the city.<br /><i>"Paul, I'd love to have an opportunity to meet you. I have clients that could help both of us."</i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<!-- // Main Page -->
+<div data-role="page" class="pages" id="home">
+
+<div class="logo">
+	<a rel="external" href="index.html"><img src="images/main-logo.jpg" width="300" /></a>
+	<div class="drop-select"> 
+		<div class="dropdown">
+     		<div class="dropdown-toggle" data-toggle="dropdown">
+    			<span><a rel="external" data-toggle="dropdown-menu" href="#">Chicago</a></span>
+				<span class="caret"></span>
+			</div>
+    		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    			<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    			<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    		</ul>
+    	</div><!-- /.dropdown -->
+	</div><!-- /.drop-select -->
+</div><!-- /.logo -->
+
+<!-- // Navigation -->
+<div id="navi">
+<div class="navbar navbar-inverse">
+	<div class="navbar-inner">
+        <div class="container">
+        	
+        	<a href="#" style="float:left !important;" class="showMenu btn btn-navbar">
+        	<i class="icon-user icon-white"></i> Trey Bayne
+        	</a>
+        	
+        	<a href="#" style="float:left !important;" class="btn btn-navbar"><i class="icon-home icon-white"></i> Home</a>
+        	
+        	<a rel="external" data-ajax="false" href="show.html" style="float:left !important;" class="btn btn-navbar"><i class="icon-play icon-white"></i> Play Show</a>
+        	
+        	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <i class="icon-align-justify icon-white"></i> Navigation
+        	</a>
+          
+          	<div class="nav-collapse collapse">
+            	<ul class="nav">
+            		<h3>&mdash; Table Of Contents &mdash;</h3>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-star icon-white"></i> <b>PURCHASE AND REDEMPTION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="show.html"><i class="icon-play icon-white"></i> <b>ITS GOOD TO HAVE FRIENDS</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-road icon-white"></i> <b>TRANSPORTATION</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-th-list icon-white"></i> <b>EVENTS</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-share icon-white"></i> <b>LEARN MORE ABOUT CHICAGO</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-user icon-white"></i> <b>MEET THE SWIFTAIR TEAM</b></a></div>
+    					</div>
+              		</li>
+              		<li>
+            			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="date-night.html"><i class="icon-heart icon-white"></i> <b>DATE NIGHT</b></a></div>
+    					</div>
+            		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-ok icon-white"></i> <b>BRENDAN'S ITINERARY</b> (10)</a> </div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="trending-topic.html"><i class="icon-ok-sign icon-white"></i> <b>TRENDING TOPICS</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="category.html"><i class="icon-plus-sign icon-white"></i> <b>THINGS TO DO</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-map-marker icon-white"></i> <b>PLACES TO EAT</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-plane icon-white"></i> <b>FOR THE ADVENTURER</b> (5)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-eye-open icon-white"></i> <b>NIGHTLIFE</b> (15)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-picture icon-white"></i> <b>FAMILY FUN</b> (10)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a href="#"><i class="icon-flag icon-white"></i> <b>LANDMARKS</b> (17)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="locals.html"><i class="icon-upload icon-white"></i> <b>LOCAL INSIDERS</b> (20)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="experiences.html"><i class="icon-camera icon-white"></i> <b>ALL EXPERIENCES</b> (40)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="deals.html"><i class="icon-tag icon-white"></i> <b>ALL DISCOUNTS</b> (25)</a></div>
+    					</div>
+              		</li>
+              		<li>
+              			<div class="row-fluid">
+    						<div class="span12"><a rel="external" data-ajax="false" href="#"><i class="icon-camera icon-white"></i> <b>VIEW ALL BY MAP</b></a></div>
+    					</div>
+              		</li>
+            	</ul>
+          	</div><!--/.nav-collapse -->
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<!-- // Header Slider -->
+<div id="myCarousel" class="carousel slide">
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+    	<div class="active item">
+    		<img id="mainimg" src="images/date-header1.jpg" />
+    		
+    		<div class="title-hldr">
+    			<div class="carousel-caption-date">
+        			<p><span>Chicago</span></p>
+      			</div>
+      			<div class="carousel-caption-date">
+        			<p><span>loves couples</span></p>
+      			</div>
+      			<div class="carousel-caption-date">
+        			<p>Calling all singles & everyone else! Need something to do?</p>
+      			</div>
+      			<div class="carousel-caption-date">
+        			<p>We have it right here.</p> <div class="none">Presented by<img src="images/match.png" /></div>
+      			</div>
+      		</div><!--/.title-hldr -->
+      		
+      		<div class="feat-thumbs">
+    			<span class="active"><img src="images/date-thumb1.jpg" /></span>
+    			<span><img src="images/date-thumb2.jpg" /></span>
+    			<span><img src="images/date-thumb3.jpg" /></span>
+    			<span><img src="images/date-thumb4.jpg" /></span>
+    		</div>
+      		
+    	</div><!--/.item -->
+    	
+    </div><!--/.carousel-inner -->
+    <div class="btn-save-pos-date">
+    <a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+    I am Single OR
+    <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+    	<li><a class="save_file" href="">Dating</a></li>
+    	<li><a class="save_file" href="">Married</a></li>
+    </ul>
+    </div>
+    
+</div><!--/#myCarousel -->    
+
+<div id="main-cnt">
+    <div class="row-fluid">
+    	<div class="span12">
+    		    <ul class="nav4 nav-tabs" id="myTab">
+    		    	<li class="active"><a rel="external" href="#topics">Dating Trends</a></li>
+    				<li><a rel="external" href="#experiences">Places To Go</a></li>
+    				<li><a rel="external" href="#events">Events</a></li>
+    				<li><a rel="external" href="#dates">Find Chemistry</a></li>
+    			</ul>
+     
+    			<div class="tab-content">
+    			<div class="tab-pane active" id="topics">
+    				<p><b>DATING FAIL</b></p>
+    				<blockquote>
+    					<p><b><i>Behold The Biggest Dating Fail</i></b></p>
+    					<p><i>January 18th 2013 3:02 PM (CST)</i></p>
+    					<p><i>By: Eric Celeste</i></p>
+    				</blockquote>
+    				<p class="lead">"She was obviously turned off the second she sat down."</p>
+					<p><b>I spend a lot of time writing at my local Starbucks.</b> I could work from home, in theory, but most times my ADD prevents me from being even the least bit productive unless I’m out of the house. So last night I found myself sitting at the ubiquitous coffee conglomerate, working on a piece for this very website when two people came and sat down next to me. They were two 30-somethings of disparate levels of attractiveness -- she was hot and he looked like Mr. Bean. As soon as they sat down a palpable nervous energy started emanating from between the two of them. It didn’t take long for me to realize that they were on an internet date… a bad one. I had headphones on at the time, but little did these wayward daters know that I was listening to Explosions In The Sky, a band with no vocalist. I could hear every word of their conversation.</p>
+					<p>I'm not going to lie; I eavesdropped on their entire date.</p>
+					<p>I couldn't help myself. It was the proverbial car crash you can’t help but slow down and gawk at. That’s how painfully uncomfortable this thing was. But, as I have recently signed up for an online dating service myself and have yet to go on an actual web-facilitated date, this eavesdropping actually served a purpose. It gave me the perfect example of what a guy should absolutely, unequivocally, never ever do or say on any date of any kind, be it online or off. Please, never ask your date such riveting questions as…</p>
+					<p class="lead">"So… do you like music?"</p>
+					<p><img src="images/cnt-image-date.jpg" /></p>
+					<p>No, bozo, this lady is repulsed by anything and everything with a melody. Are you serious? This is one of your first questions? That’s like a baseball coach sending out a goddamn donkey at the top of the order. It’s the equivalent of asking, "So, you don’t happen to eat food with your mouth by any chance, do you?" Now, if he were to have asked what kind of music she listened to, normal question. That’s a conversation starter. And even after having asked such a moronic initial question, if he realized it was worded poorly and made a joke out of it -- totally cool. But cool, this guy was not. She responded: "Uhhh, sure," as he nodded like a dope and moved on to his next brilliant musing. So that pointed query wasn't a means of transitioning into a conversation about music? You just really wanted to know if music was something she enjoyed!?</p>
+					<p class="lead">"Online dating is f*cking weird, right? I do this shit all the time and I still think it’s just so f*cking weird.”</p>
+					<p>This guy cursed like a sailor, and it obviously turned her off. Now, in her defense, she was obviously turned off the second she sat down, and rightfully so. Her date looked like the kind of guy who may or may not own a leather jacket with a Looney Tunes character emblazoned across the back. But the cherry on top of this repugnant sundae was the way this guy spoke. Now, don’t get me wrong, I curse, but I like to think that I do so at the proper times. My filth is calculated; a well-timed curse can be extremely funny. But if I were sitting across from a beautiful woman whom I’ve only just met, I wouldn’t refer to the temperature in Starbucks as "too f*ckin’ hot, ya’ know?" This guy couldn't get laid in Hawaii.</p>
+					<p class="lead">"So, what time do you wake up?"</p>
+					<p>In one of many moments that fans of Arrested Development would describe as giving them douche chills, this brilliant conversationalist asked his date what time she wakes up in the morning. I swear this is 100% true. And make no mistake about it, this question was in no way prefaced with any talk about her job or morning routine or anything of the like. It was one stranger asking another stranger what time she wakes up in the morning. If that doesn't say creep then I don’t know what does. He may as well have asked if there was an accessible window near her shower.</p>
+					<p class="lead">"So you think you're gonna have babies?"</p>
+					<p>At this point I wanted to interject and shout, "Not with you, dipshit!” (See: well-timed curses can be funny.) It’s OK to be curious about such a topic. After a certain age it’s natural to wonder about such things when going on a date. But to crudely ask such a pointed question within the first seven minutes of a first date? What’s your next question? How many abortions have you had?</p>
+					<p class="lead">"So what are you thinking? Obama or Romney?"</p>
+					<p>Here’s a brilliant idea: ask the most polarizing of questions while on a date that already couldn't go any more afoul, even if it were taking place on an actual sinking ship, not just a metaphorical one. As could be expected, they had opposing political opinions. She was a Democrat. He was a staunch Republican. She was willing to change topics and move on, and even made a playful joke about doing so. He, well, not so much. He spent the following fifteen minutes or so trying to convert this lady into a Romney supporter. She no doubt was closer to being converted into a lesbian.</p>
+					<p>After listening to this painful exchange continue for the better part of half an hour, I just couldn’t take it any more. I stepped in, poured a scalding hot latte over the moron’s head and proceeded to make sweet, passionate love to the woman right there on the Starbucks’ floor while the baristas cheered and celebrated.</p>
+					<p>OK, that last bit isn’t true, but my account of this awful date sadly is. </p>
+					<p>So guys, I implore you: do not ever do anything remotely similar to what this guy did on any future date, ever. Be cool. Be funny. Be charming. Hell, if it’s not in your nature to have a relaxed conversation with a new person, go in with a game plan. Write crib notes on the palm of your hand. I don’t care. But please, whatever you do, in the interest of saving the good name of single guys everywhere, let this date serve as a cautionary fail.</p>
+					<p><button class="btn btn-primary" type="button">Save Article</button></p>
+    			</div>
+    			<div class="tab-pane" id="experiences">
+    				<div class="row-fluid">
+					<div class="span12">
+						<h2><span>Places To Go</span></h2>
+						<div class="drop-select1 pull-left"> 
+							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini" href="#">Chicago - Change City <span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+						</div><!-- /.drop-select -->
+						
+					</div><!-- /.span12 -->
+				</div>
+    				<p><b>Looking for where the singles are at?</b> We've got some of the greatest experiences and deals where all the singles hangout. </p>
+    				<p>Maybe a cool Chicago Cubs ballgame or stand-up paddle boarding on the Mississippi River. If your looking for a date to have fun with these incredible experiences, click on <b>Find Chemistry above</b>. </p>
+					<div id="myCarousel4" class="carousel slide">
+    	<!-- Carousel items -->
+    	<div class="carousel-inner">
+    		<div class="active item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img.jpg" />
+        					<div class="caption">
+        						<h3>Chicago's Best Personal Tour Guide</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec sed odio dui.</p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$200</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img2.jpg" />
+        					<div class="caption">
+        						<h3>Stand-Up Paddle Boarding On The Mississippi River</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$89</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img3.jpg" />
+        					<div class="caption">
+        						<h3>Chicago Cubs Game Saturday Night</h3>
+        						<p>Cubs. The team that never wins yet always wins. They have the most loyal fans of all baseball. In 1998, Sammy Sosa got off to a slow start, hitting 13 home runs in the first two months of the season with the Cubs. But he found his groove late in the season... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br /><b>$400</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+										
+      			</div><!-- /.row-fluid -->		
+    		</div><!-- /.item -->
+    							
+    		<div class="item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img.jpg" />
+        					<div class="caption">
+        						<h3>Chicago's Best Personal Tour Guide</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec sed odio dui.</p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$200</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->																			    				
+
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img2.jpg" />
+        					<div class="caption">
+        						<h3>Stand-Up Paddle Boarding On The Mississippi River</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        						<p><a class="btn btn-large btn-block btn-primary" href="#">View It Now! <br /><b>$89</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/featured-img3.jpg" />
+        					<div class="caption">
+        						<h3>Chicago Cubs Game Saturday Night</h3>
+        						<p>Cubs. The team that never wins yet always wins. They have the most loyal fans of all baseball. In 1998, Sammy Sosa got off to a slow start, hitting 13 home runs in the first two months of the season with the Cubs. But he found his groove late in the season... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br /><b>$400</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+											
+      			</div><!-- /.row -->
+    		</div><!--/.item -->
+    					
+    	</div><!--/.carousel-inner -->
+    					
+    	<!-- Carousel nav -->
+    	<div id="carousel-nav2">
+        	<a href="#myCarousel4" data-to="1" class="active">1</a>
+			<a href="#myCarousel4" data-to="2">2</a>
+        </div>
+        <!--/.Carousel nav -->
+    </div><!--/.myCarousel4 -->
+    			</div>
+    			<div class="tab-pane" id="events">
+    			
+    			<div class="row-fluid">
+					<div class="span12">
+						<h2><span><img src="images/stir.jpg" /></span></h2>
+						<div class="drop-select1 pull-left"> 
+							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini" href="#">Chicago - Change City <span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+						</div><!-- /.drop-select -->
+						
+					</div><!-- /.span12 -->
+				</div>
+    			
+    			<p><b>Match.com is excited to offer live events, all across the country.</b> From happy hour to sushi-making sessions, Stir is your connection to interesting singles in your age range. So, let the mixing begin! </p>
+    				
+    			<div id="myCarousel3" class="carousel slide">
+    	<!-- Carousel items -->
+    	<div class="carousel-inner">
+    		<div class="active item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_532_634912899133758057/340x255.jpg" />
+        					<div class="caption">
+        						<h3>Paint Up A Great Time!</h3>
+        						<p><i class="icon-calendar"></i> Wednesday, January 23, 2013<br />
+        						<i class="icon-time"></i> 6:00pm to 9:00pm</p>
+        						<p>Join other Match.com singles at this exclusive event for an alternative to a typical evening out in Chicago. Bring your favorite bottle of wine and let the experts provide the rest. You'll get painting supplies, professional instruction all of the things you need from one thing to another...</p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$35</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_532_634916965632646811/340x255.jpg" />
+        					<div class="caption">
+        						<h3>Get Mixed Up (In a Good Way)</h3>
+        						<p><i class="icon-calendar"></i> Thursday, January 24, 2013<br />
+        						<i class="icon-time"></i> 7:00pm to 9:30pm</p>
+        						<p>Enjoy an evening that elevates cocktails to an art form. The mixologists at Femme du Coupe will share secrets about why different flavors blend together well and what forms a classic cocktail versus a more modern libation. After each cocktail...</p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$30</a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_540_634922471517070443/340x255.jpg" />
+        					<div class="caption">
+        						<h3>Introducing Speed Dating, Stir'd</h3>
+        						<p><i class="icon-calendar"></i> Thursday, January 24, 2013<br />
+        						<i class="icon-time"></i> 7:00pm to 9:00pm</p>
+        						<p>Begin your evening mingling over cocktails in our exclusive area reserved for members only. Prep for the event with an advanced collection of clever conversation starters specially updated to keep the evening fun. Then you will accelerate into... </p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$25</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+										
+      			</div><!-- /.row-fluid -->		
+    		</div><!-- /.item -->
+    							
+    		<div class="item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_530_634938846489744135/340x255.jpg" />
+        					<div class="caption">
+        						<h3>It's Movie Night!</h3>
+        						<p><i class="icon-calendar"></i> Thursday, February 7, 2013<br />
+        						<i class="icon-time"></i> 6:30pm to 10:00pm</p>
+        						<p>Get ready for an evening with other movie buffs! Join singles like you for a pre-screening of Safe Haven, a romantic thriller about a beautiful yet unassuming woman with romantic reservations, who in her darkest hour realizes that love is not all about the stuff you hear about...</p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$35</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_532_634937484748596243/340x255.jpg" />
+        					<div class="caption">
+        						<h3>It Takes Two to Tango</h3>
+        						<p><i class="icon-calendar"></i> Thursday, February 14, 2013<br />
+        						<i class="icon-time"></i> 7:30pm to 9:30pm</p>
+        						<p>Your night begins with time to mingle and enjoy a drink or two and some fantastic chocolate. Then, one of Fred Astaire's expert instructors will introduce you to the basics of Argentine Tango. You will continuously change partners, meeting...</p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$20</a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="http://images.match.com/match/events/rsvp/individual/IBE_538_634933973017279509/340x255.jpg" />
+        					<div class="caption">
+        						<h3>The Single Best Thing To Do</h3>
+        						<p><i class="icon-calendar"></i> Tuesday, February 19, 2013<br />
+        						<i class="icon-time"></i> 6:00pm to 9:00pm</p>
+        						<p>Barrelhouse Flat features craft cocktails, punches, carefully selected beer & wine lists and small plates meant to be shared. It's the perfect place to mix & mingle. Come alone or bring a friend! Only $5. Only with Match.com. You won't regret...</p>
+        						<p><a class="btn btn-large btn-block btn-primary" data-ajax=false href="experience.html">View It Now! <br />$25</a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+											
+      			</div><!-- /.row -->
+    		</div><!--/.item -->
+    					
+    	</div><!--/.carousel-inner -->
+    					
+    	<!-- Carousel nav -->
+    	<div id="carousel-nav1">
+        	<a href="#myCarousel3" data-to="1" class="active">1</a>
+			<a href="#myCarousel3" data-to="2">2</a>
+        </div>
+        <!--/.Carousel nav -->
+    </div><!--/.myCarousel3 -->
+    				
+    			</div>
+    			<div class="tab-pane" id="dates">
+    				<div class="row-fluid">
+					<div class="span12">
+						<h2><span><img src="images/chemistry.jpg" /></span></h2>
+						<div class="drop-select1 pull-left"> 
+							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini" href="#">Chicago - Change City <span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">Dallas</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Austin</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">Denver</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+						</div><!-- /.drop-select -->
+						
+					</div><!-- /.span12 -->
+				</div>
+					<p class="lead">"The personality test was so accurate I think they cheated."</p>
+    				<p><b>So Why Chemistry?</b></p>
+    				<p>We at Chemistry know you not only want to go on dates, <i>you want to go on great dates</i>. No awkward silences. No moment of regret five minutes after you sit down. Just a great date with someone you've made a connection with. </p>
+    				<p>Our interesting conversation-starting activities, personality insights and personalized tips help you <i>get to know the person behind the profile</i>. That way, when you decide to meet someone for a first date, it will feel like you're meeting for the second time.</p>
+    				<p>We know some of our competitors want you to believe they hold the formula for who you're compatible with and who is right for you. We at Chemistry.com know that <i>only you know who is right for you</i>. So we make it fun and easy for you to take the first steps in figuring out who that is before you meet in person.</p>
+    				<p><i>Empower your love life</i> and join Chemistry.com today.</p>
+    				<p><img src="images/couple.jpg" /></p>
+    				<p><b>Here's How Chemistry Works:</b></p>
+    				<p><b>1. Take the test</b><br />Reveal your personality type and see what makes you tick.</p>
+    				<p><b>2. Be Introduced</b><br />Receive personalized matches and see how you click.</p>
+    				<p><b>3. Get to Know</b><br />We'll help you get to know your matches online before you meet them.</p>
+    				<div class="tri-image">
+						<div class="row-fluid">
+  							<div class="span4"><img src="images/date-tri1.jpg" /></div>
+  							<div class="span4"><img src="images/date-tri2.jpg" /></div>
+  							<div class="span4"><img src="images/date-tri3.jpg" /></div>
+						</div>
+					</div>
+    				<p><b>A few words from Dr. Helen Fisher</b></p>
+    				<p><i>Starting a relationship should be fun</i>. It is good for the mind and body. And, fun is good for love. Did you know any kind of novel game is likely to drive up dopamine in the brain? It's the natural stimulant that can make you more susceptible to romance. So - we have decided to help you get in the mood with a few chemistry starters.</p>
+    				<p>In the beginning of a relationship, you know almost nothing about each other. Which means, you tend to overweigh the few morsels of information you receive. As a result, the getting to know you process is full of breaking points. These little moments take on heavy (and unrealistic) meanings that can send you flying out the door - sometimes too quickly.</p>
+    				<p>Now, thanks to these chemistry starters, you can meet new people in a fun and interesting way. All the while, picking up facts, ideas and points of view about one another that will strengthen your bond. It's our hope this will help you pole vault those early breaking points - guiding you successfully on your journey toward finding the one.</p>
+    				<p>So, in the gaming spirit, I'd like to share my motto with you, <i>"We're here. We're alive. Let's play."</i></p>
+    				<p>&nbsp;</p>
+    				<p><b>Ready to find Chemistry?</b></p>
+    				<table id="date-table" class="table date-table">
+    					<tr>
+    						<td class="date-right" width="25%"><label>First Name:</label></td>
+    						<td colspan="3"><input type="text" /></td>
+    					</tr>
+    					<tr>
+    						<td class="date-right" width="25%"><label>I am a:</label></td>
+    						<td colspan="3">
+    							<label class="checkbox inline">
+  									<input style="display:none" type="checkbox" id="inlineRadio1" value="option1"> Male
+								</label>
+								<label class="checkbox inline">
+  									<input style="display:none" type="checkbox" id="inlineRadio" value="option2"> Female
+								</label></td>
+    					</tr>
+    					<tr>
+    						<td class="date-right" width="25%"><label>Seeking a:</label></td>
+    						<td colspan="3">
+    							<label class="checkbox inline">
+  									<input style="display:none"  type="checkbox" id="inlineRadio1" value="option1"> Male
+								</label>
+								<label class="checkbox inline">
+  									<input style="display:none"  type="checkbox" id="inlineRadio" value="option2"> Female
+								</label></td>
+    					</tr>
+    					
+    					<tr>
+    						<td class="date-right" width="25%"><label>Password:</label></td>
+    						<td colspan="3"><input type="text" /></td>
+    					</tr>
+    					
+    					<tr>
+    						<td class="date-right" width="25%"><label>Date of Birth:</label></td>
+    						<td width="25%">
+    							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini btn-primary" href="#">Month &nbsp;<span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">January</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">February</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">March</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+    						</td>
+    						<td width="25%">
+    							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini btn-primary" href="#">Date &nbsp;<span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">1</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">2</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">3</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+    						</td>
+    						<td width="25%">
+    							<div class="dropdown">
+     							<div class="dropdown-toggle" data-toggle="dropdown">
+    								<span><a rel="external" data-toggle="dropdown-menu" class="btn btn-mini btn-primary" href="#">Year &nbsp;<span class="caret"></span></a></span>
+								</div>
+    							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    								<li><a rel="external" tabindex="-1" href="#">2012</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">2011</a></li>
+    								<li><a rel="external" tabindex="-1" href="#">2010</a></li>
+    							</ul>
+    						</div><!-- /.dropdown -->
+    						</td>
+    					</tr>
+    					
+    					<tr>
+    						<td class="date-right" width="25%"><label>Email Address:</label></td>
+    						<td colspan="3"><input type="text" /></td>
+    					</tr>
+    					<tr>
+    						<td class="date-right" width="25%"><label>Zip/Postal Code:</label></td>
+    						<td colspan="3"><input type="text" /></td>
+    					</tr>
+    					<tr>
+    						<td width="25%">&nbsp;</td>
+    						<td colspan="3"><button class="btn btn-success" type="button">Find Chemistry Now!</button></td>
+    					</tr>
+    					<tr>
+    						<td width="25%">&nbsp;</td>
+    						<td colspan="3"><small>By choosing to continue, I certify I am at least 18 years old and have read and agree to Chemistry's Terms of Use and Privacy Policy.</small></td>
+    					</tr>
+    					
+    				</table>
+    			</div>
+    </div>
+     
+    	</div>
+    </div>
+</div>
+<div class="comments-hldr clearfix">
+	<h2>Have something to say? Post a comment!</h2>
+	<table width="95%" border="0" cellspacing="5" cellpadding="5" align="center">
+  <tr>
+    <td><div class="control-group">
+<div class="controls">
+<input type="text" id="inputName" placeholder="Name (required)">
+</div>
+</div></td>
+    <td><div class="control-group">
+<div class="controls">
+<input type="text" id="inputEmail" placeholder="Email (required, but will not be displayed)">
+</div>
+</div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><textarea></textarea></td>
+  </tr>
+</table>
+<button class="btn btn-primary pull-right-btn" type="button">POST</button>
+</div>
+<div class="comm">
+	<div class="media">
+    	<a class="pull-left" href="#">
+    		<img class="media-object" src="images/comment-thumb.jpg">
+    	</a>
+    	<div class="media-body">
+    		<h4 class="media-heading">Media heading</h4>
+    		<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>    		
+    	</div>
+    </div>
+    <div class="media">
+    	<a class="pull-left" href="#">
+    		<img class="media-object" src="images/comment-thumb.jpg">
+    	</a>
+    	<div class="media-body">
+    		<h4 class="media-heading">Media heading</h4>
+    		<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. </p>    		
+    	</div>
+    </div>
+</div>
+
+<div class="exp">
+	<a href="#">See What The Locals Have To Say</a>
+</div>
+
+<!-- // Experiences -->
+<div id="sec-mid-home" class="container-fluid">
+	
+	<div id="myCarousel2" class="carousel slide">
+    	<!-- Carousel items -->
+    	<div class="carousel-inner">
+    		<div class="active item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/wymeia-profile.jpg" />
+        					<div class="caption">
+        						<h3>Wymeia Sanders</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Wymeia</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/paul-profile.jpg" />
+        					<div class="caption">
+        						<h3>Paul Cuban</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Paul</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/dann-profile.jpg" />
+        					<div class="caption">
+        						<h3>Dann Petty</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a rel="external" data-ajax="false" href="insider.html"><b>Meet Dann</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+										
+      			</div><!-- /.row-fluid -->		
+    		</div><!-- /.item -->
+    							
+    		<div class="item">
+    								
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/wymeia-profile.jpg" />
+        					<div class="caption">
+        						<h3>Wymeia Sanders</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Wymeia</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/paul-profile.jpg" />
+        					<div class="caption">
+        						<h3>Paul Cuban</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Paul</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/dann-profile.jpg" />
+        					<div class="caption">
+        						<h3>Dann Petty</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a rel="external" data-ajax="false" href="insider.html"><b>Meet Dann</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+											
+      			</div><!-- /.row -->
+    		</div><!--/.item -->
+    						
+    		<div class="item">
+    			<div class="row-fluid">
+    				<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/wymeia-profile.jpg" />
+        					<div class="caption">
+        						<h3>Wymeia Sanders</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Wymeia</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/paul-profile.jpg" />
+        					<div class="caption">
+        						<h3>Paul Cuban</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a href="#"><b>Meet Paul</b></a></p>
+							</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+        			<div class="span4">
+        				<div class="thumbnail">
+        				<img src="images/dann-profile.jpg" />
+        					<div class="caption">
+        						<h3>Dann Petty</h3>
+        						<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. <a rel="external" data-ajax="false" href="insider.html"><b>Meet Dann</b></a></p>
+        					</div>
+        				</div>
+					</div><!--/.span4 -->
+									
+      			</div><!-- /.row -->
+    		</div><!--/.item -->
+    	</div><!--/.carousel-inner -->
+    					
+    	<!-- Carousel nav -->
+    	<div id="carousel-nav">
+        	<a href="#myCarousel2" data-to="1" class="active">1</a>
+			<a href="#myCarousel2" data-to="2">2</a>
+			<a href="#myCarousel2" data-to="3">3</a>
+        </div>
+        <!--/.Carousel nav -->
+    </div><!--/.myCarousel2 -->
+	
+</div> <!-- /.sec-mid -->
+
+<!-- // Footer Menu -->
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+          
+          	<div>
+            	<ul class="nav-btm nav">
+              		<li><a href="#">Other Cities</a></li>
+              		<li><a href="#">About</a></li>
+              		<li><a href="#">Terms & Conditions</a></li>
+              		<li><a href="#">Privacy Policy</a></li>
+              		<li><a href="#">FAQs</a></li>
+              		<img class="btm-logo" src="images/swiftair-btm-logo.jpg" width="180" />
+            	</ul>
+          	</div><!--/.nav-collapse -->
+          	
+        </div><!--/.container -->
+    </div><!--/.navbar-inner -->
+</div><!--/.navbar -->
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cookies.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/experience.js"></script>
+<script type="text/javascript">
+var currentPage = 0,
+	currentImg = 0;
+
+function clickCarouselThumb() {
+
+	// click a carousel thumbnail
+
+	if(currentImg==4) {
+		currentImg = 0;
+	}
+	var imgs = $('div.feat-thumbs img');
+	$(imgs[currentImg]).click()
+	currentImg = currentImg + 1;
+
+	// click the next one after 10 seconds	
+
+	setTimeout("clickCarouselThumb()", 10000);	
+
+}	
+
+function addDeal() {
+
+
+	if(docCookies.hasItem('deals')) {
+
+		var deals_in_cart = docCookies.getItem('deals').split(',');
+
+	} else {
+
+		var deals_in_cart = [];
+
+	}
+
+	var exists = false;
+
+	if(deals_in_cart.length>0) {
+
+		for(var x=0;x<deals_in_cart.length;x++) {
+			if(deals_in_cart[x]==='ballgame') {
+				exists = true;
+				break;
+			}
+		}
+
+	}
+
+	if(exists) {
+
+		alert('This experience is already in your cart.')
+
+	} else {
+
+		deals_in_cart.push('ballgame')
+		docCookies.setItem('deals', deals_in_cart.join(','));				
+		formatBar(true,false);
+
+	}
+	
+
+}
+
+function addFile(e) {
+
+	var exists = false,
+		file = e.currentTarget.innerText;
+
+	if(docCookies.hasItem('files')) {
+
+		var saved_files = docCookies.getItem('files').split(',');
+
+	} else {
+
+		var saved_files = [];
+
+	}
+
+	file = 'ballgame'+file;
+
+	for(var x=0;x<saved_files.length;x++) {
+		if(saved_files[x]===file) {
+			exists = true;
+			break;
+		}
+	}
+
+	if(exists) {
+
+		alert('You have already saved this file.')
+
+	} else {
+
+		saved_files.push(file)
+		docCookies.setItem('files', saved_files.join(','));				
+		formatBar(false, true);
+
+	}
+
+}
+
+function formatBar(pulsedeal,pulsefile) {
+
+	var deals = [],
+		files = [];
+
+	if(typeof(pulsedeal)=='undefined') {
+		var pulsedeal = true;		
+	}
+
+	if(typeof(pulsefile)=='undefined') {
+		var pulsefile = true;		
+	}	
+
+	if(docCookies.hasItem('deals')) {
+		var deals = docCookies.getItem('deals').split(',')
+	}
+
+	if(docCookies.hasItem('files')) {
+		var files = docCookies.getItem('files').split(',')
+	}	
+
+	if(deals.length>0 || files.length > 0) {
+		$('#bar_youhave').slideDown();				
+	}
+
+	if(deals.length>0) {
+		$('#bar_deal_count').html(deals.length);
+		$('#bar_deal').slideDown();
+		if(pulsedeal) {
+			$('#bar_deal_count').effect("pulsate", {time: 1}, 2000);
+		}
+	}
+
+	if(deals.length==1) {
+		$('#deallabel').html('Deal/Experience')
+	} else if (deals.length>1) {
+		$('#deallabel').html('Deals/Experiences')
+	}
+
+	if(deals.length>0 && files.length > 0) {		
+		$('#bar_and').slideDown();
+	}
+
+	if(files.length==1) {
+		$('#filelabel').html('Saved File')
+	} else if (deals.length>1) {
+		$('#filelabel').html('Saved Files')
+	}	
+
+	if(files.length>0) {
+		$('#bar_file_count').html(files.length);
+		$('#bar_files').slideDown();
+		if(pulsefile) {
+			$('#bar_file_count').effect("pulsate", {time: 1}, 2000);
+		}
+	}
+
+}
+
+jQuery(document).ready(function($) {
+
+	$('#accordion2').on('show', function() { 
+
+		$('#toggle').removeClass('icon-plus').addClass('icon-minus');});
+
+		// Reverse it for hide: 
+		$('#accordion2').on('hide', function() { 
+
+		$('#toggle').removeClass('icon-minus').addClass('icon-plus'); 
+
+	});
+
+	$('#forgot-password').click(function(){
+		$('#login-form').toggle();
+		$('#recover-password').toggle(); 
+	});
+
+	$('#forgot-gift').click(function(){
+		$('#login-form').toggle();
+		$('#recover-gift').toggle(); 
+	});
+	
+	// Places to go Carousel
+	
+	$('#myCarousel4').carousel({
+		interval: 7000
+	})
+	$('#carousel-nav2 a').click(function(q){
+		q.preventDefault();
+		clickedPage = $(this).attr('data-to')-1;
+		currentPage = clickedPage-1;
+		$('#myCarousel4').carousel(clickedPage);
+	});
+	var pages = $("#carousel-nav2 a");
+	var pagesCount = pages.length;
+	$('#myCarousel4').on('slide', function(evt) {$(pages).removeClass("active");currentPage++;currentPage=(currentPage%pagesCount);$(pages[currentPage]).addClass("active");
+	});
+	
+	// Events Carousel
+
+	$('#myCarousel3').carousel({
+		interval: 7000
+	})
+	$('#carousel-nav1 a').click(function(q){
+		q.preventDefault();
+		clickedPage = $(this).attr('data-to')-1;
+		currentPage = clickedPage-1;
+		$('#myCarousel3').carousel(clickedPage);
+	});
+	var pages = $("#carousel-nav1 a");
+	var pagesCount = pages.length;
+	$('#myCarousel3').on('slide', function(evt) {$(pages).removeClass("active");currentPage++;currentPage=(currentPage%pagesCount);$(pages[currentPage]).addClass("active");
+	});
+
+	// lower carousel
+
+	$('#myCarousel2').carousel({
+		interval: 7000
+	})
+	$('#carousel-nav a').click(function(q){
+		q.preventDefault();
+		clickedPage = $(this).attr('data-to')-1;
+		currentPage = clickedPage-1;
+		$('#myCarousel2').carousel(clickedPage);
+	});
+	var pages = $("#carousel-nav a");
+	var pagesCount = pages.length;
+	$('#myCarousel2').on('slide', function(evt) {$(pages).removeClass("active");currentPage++;currentPage=(currentPage%pagesCount);$(pages[currentPage]).addClass("active");});
+
+
+	$('#myTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	})	
+
+	// listen to thumbnail clicks
+	$('div.feat-thumbs img').bind('click',function(q) {
+
+		q.preventDefault();
+
+		currentImg = $('div.feat-thumbs img').index(q.currentTarget);
+
+		$('div.feat-thumbs span').removeClass('active')
+
+		var new_main_src = $(q.currentTarget).attr('src').replace('thumb','header'),
+			mainimg = $('#mainimg');
+
+		mainimg.attr('src', new_main_src)	
+
+		$(q.currentTarget).parent('span').addClass('active')
+
+	})
+
+	// click first image thumbnail
+
+	setTimeout("clickCarouselThumb()", 1000);
+
+	// listen to clicks to buy deal
+
+	$('#buydeal').bind('click', addDeal);
+
+	// listen to clicks to save article
+
+	$('.save_file').bind('click', addFile);
+
+	// setup the gray bar
+
+	formatBar(false,false);
+
+
+});
+</script>
+</body>
+</html>
